@@ -3,8 +3,11 @@
     "material-ui": "^0.16.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-router": "^2.4.0",
-    "react-tap-event-plugin": "^1.0.0"
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^1.0.0",
+    "reactfire": "^1.0.0",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.2",
@@ -28,6 +31,7 @@
     "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.9.0",
+    "firebase": "^3.5.2",
     "gulp": "gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
     "gulp-filter": "^4.0.0",
     "gulp-hub": "frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",

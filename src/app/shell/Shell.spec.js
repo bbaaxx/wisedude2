@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 import React from 'react';
 import TestUtils from 'react/lib/ReactTestUtils';
-import {Shell} from './shell';
+import {Shell} from './Shell';
 
 describe('hello component', () => {
   it('should render hello world', () => {

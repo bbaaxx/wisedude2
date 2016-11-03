@@ -9,7 +9,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
+        test: /\.(js$|jsx$)/,
         exclude: /node_modules/,
         loader: 'eslint'
       }
@@ -41,7 +41,7 @@ module.exports = {
         test: /\.(css|scss)$/,
         loaders: ['style', 'css', 'sass', 'postcss']
       }, {
-        test: /\.js$/,
+        test: /\.(js$|jsx$)/,
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel']
       }

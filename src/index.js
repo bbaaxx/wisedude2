@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import {Shell} from './app/shell/components/stateful/shell';
+import {ShellContainer} from './app/shell/ShellContainer';
 
 import '../semantic/dist/semantic.css';
 import './index.scss';
@@ -13,6 +13,9 @@ import './index.scss';
 injectTapEventPlugin();
 
 ReactDOM.render(
-  <Shell/>,
-  document.getElementById('shell')
+  <ShellContainer/>,
+  document.getElementById('shell'),
+  () => {
+    console.log('This callback occurs after ReactDOM.render does its thing');
+  }
 );
