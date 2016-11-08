@@ -64,11 +64,11 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js",
-    "serve": "./node_modules/gulp/bin/gulp.js serve",
-    "serve:dist": "./node_modules/gulp/bin/gulp.js serve:dist",
-    "test": "./node_modules/gulp/bin/gulp.js test",
-    "test:auto": "./node_modules/gulp/bin/gulp.js test:auto"
+    "build": "node ./node_modules/gulp/bin/gulp.js",
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
+    "serve:dist": "node ./node_modules/gulp/bin/gulp.js serve:dist",
+    "test": "node ./node_modules/gulp/bin/gulp.js test",
+    "test:auto": "node ./node_modules/gulp/bin/gulp.js test:auto"
   },
   "eslintConfig": {
     "root": true,
