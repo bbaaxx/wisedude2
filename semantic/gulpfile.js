@@ -3,8 +3,10 @@
 *******************************/
 
 var
-  gulp         = require('gulp-help')(require('gulp')),
 
+  //gulp         = require('gulp-help')(require('gulp')),
+
+  gulp         = require('gulp');
   // read user config to know what task to load
   config       = require('./tasks/config/user'),
 

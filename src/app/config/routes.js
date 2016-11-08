@@ -4,10 +4,8 @@ import {requireAuth} from '../utils/authenticated';
 
 // These have to come from somewhere backendie
 import {Landing} from '../landing/Landing';
+import {SomeComponentContainer} from '../component-template/SomeComponentContainer';
 import {LoginContainer} from '../user/LoginContainer';
-import {Sandbox} from '../shell/Sandbox';
-
-import {Hello} from '../shell/hello';
 
 export function getRoutes(authChangeHandler) {
   const routes = [
@@ -18,16 +16,17 @@ export function getRoutes(authChangeHandler) {
       path: '/login',
       component: () => (<LoginContainer onAuthChange={authChangeHandler}/>)
     }, {
-      path: '/sandbox',
-      component: Sandbox,
-      onEnter: requireAuth
-    }, {
-      path: '/hello',
-      component: Hello,
+      path: '/component-template',
+      component: SomeComponentContainer,
       onEnter: requireAuth
     }
   ];
+
   return (
-    <Router history={browserHistory} routes={routes}/>
+    <Router history={browserHistory} routes={routes} onUpdate={handleRouterUpdates}/>
   );
+
+  function handleRouterUpdates() {
+    console.log('Routee state updated');
+  }
 }

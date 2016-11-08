@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
-import {HeadingContainer} from '../heading/HeadingContainer';
-import {FootingContainer} from '../footing/FootingContainer';
 
 export class Shell extends Component {
   render() {
     return (
-      <div id="shell-container">
-        <HeadingContainer authenticatedUser={this.props.authenticatedUser}/>
-        <div id="router-container">
+      <div className="outer-shell">
+        <div className="heading-shell">
+          {this.props.headingComponent}
+        </div>
+        <div className="routing-shell">
           {this.props.routes}
         </div>
-        <FootingContainer/>
+        <div className="footing-shell">
+          {this.props.footingComponent}
+        </div>
       </div>
     );
   }
@@ -18,6 +20,6 @@ export class Shell extends Component {
 
 Shell.propTypes = {
   routes: React.PropTypes.element,
-  authenticatedUser: React.PropTypes.object,
-  onAuthChange: React.PropTypes.func
+  headingComponent: React.PropTypes.element,
+  footingComponent: React.PropTypes.element
 };

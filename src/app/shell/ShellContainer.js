@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import * as firebase from 'firebase';
 import {getRoutes} from '../config/routes';
+
 import {Shell} from './Shell';
+import {HeadingContainer} from '../heading/HeadingContainer';
+import {FootingContainer} from '../footing/FootingContainer';
 
 export class ShellContainer extends Component {
 
@@ -11,7 +14,6 @@ export class ShellContainer extends Component {
       authenticatedUser: null,
       rememberMe: false
     };
-
     this.handleAuthChange = this.handleAuthChange.bind(this);
   }
 
@@ -28,11 +30,19 @@ export class ShellContainer extends Component {
   }
 
   render() {
+    const headingComponent = (
+      <HeadingContainer
+        authenticatedUser={this.state.authenticatedUser}
+        />
+    );
+    const footingComponent = (
+      <FootingContainer/>
+    );
     return (
       <Shell
+        headingComponent={headingComponent}
         routes={this.state.appRoutes}
-        authenticatedUser={this.state.authenticatedUser}
-        onAuthChange={this.handleAuthChange}
+        footingComponent={footingComponent}
         />
     );
   }
