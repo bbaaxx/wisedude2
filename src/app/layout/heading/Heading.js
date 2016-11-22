@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Icon, Label} from 'semantic-ui-react';
-import {UserQuickMenu} from '../user/UserQuickMenu';
+import {UserQuickMenu} from '../../user/UserQuickMenu';
 
 export class Heading extends Component {
   render() {
@@ -9,7 +9,9 @@ export class Heading extends Component {
       greeting = (
         <Label>
           <Icon name="barcode"/>
-          Konichiwa, <a onClick={this.props.onUserMenuToggle}>{this.props.authenticatedUser.displayName}</a>
+          Konichiwa, <a onClick={this.props.onUserMenuToggle}>
+            {this.props.authenticatedUser.displayName}
+          </a>
         </Label>
       );
     } else {
