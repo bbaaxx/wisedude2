@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as firebase from 'firebase';
-import {getRoutes} from '../config/routes';
+import {getRoutes} from '../../config/routes';
 
 import {Shell} from './Shell';
 import {HeadingContainer} from '../heading/HeadingContainer';

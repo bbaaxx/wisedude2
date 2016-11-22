@@ -7,6 +7,10 @@ module.exports = function () {
         conf.paths.dist
       ]
     },
+    https: {
+      key: conf.paths.conf + '/server.key',
+      cert: conf.paths.conf + '/server.crt',
+    },
     open: false
   };
 };

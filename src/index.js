@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import {ShellContainer} from './app/shell/ShellContainer';
+import {ShellContainer} from './app/layout/shell/ShellContainer';
 
 import '../semantic/dist/semantic.css';
 import './index.scss';

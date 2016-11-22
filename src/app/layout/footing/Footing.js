@@ -4,7 +4,7 @@ export class Footing extends Component {
   render() {
     return (
       <footer>
-        <h3>The footer</h3>
+        <p>Built with ♥ by bbaaxx from Codetitlan </p>
       </footer>
     );
   }
