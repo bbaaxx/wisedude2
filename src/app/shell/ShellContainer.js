@@ -42,6 +42,7 @@ export class ShellContainer extends Component {
       <Shell
         headingComponent={headingComponent}
         routes={this.state.appRoutes}
+        routerComponent={this.state.appRoutes}
         footingComponent={footingComponent}
         />
     );

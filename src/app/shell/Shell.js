@@ -8,7 +8,7 @@ export class Shell extends Component {
           {this.props.headingComponent}
         </div>
         <div className="routing-shell">
-          {this.props.routes}
+          {this.props.routerComponent}
         </div>
         <div className="footing-shell">
           {this.props.footingComponent}
@@ -19,7 +19,7 @@ export class Shell extends Component {
 }
 
 Shell.propTypes = {
-  routes: React.PropTypes.element,
+  routerComponent: React.PropTypes.element,
   headingComponent: React.PropTypes.element,
   footingComponent: React.PropTypes.element
 };
