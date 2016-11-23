@@ -1,9 +1,7 @@
-
-import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import {ShellContainer} from './app/layout/shell/ShellContainer';
+import {getRouter} from './app/config/router';
 
 import '../semantic/dist/semantic.css';
 import './index.scss';
@@ -12,8 +10,10 @@ import './index.scss';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
+const router = getRouter();
+
 ReactDOM.render(
-  <ShellContainer/>,
+  router,
   document.getElementById('shell'),
   () => {
     console.log('This callback occurs after ReactDOM.render does its thing');

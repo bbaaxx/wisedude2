@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Heading} from './Heading';
+import {Header} from './Header';
 
-export class HeadingContainer extends Component {
+export class HeaderContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,13 +17,13 @@ export class HeadingContainer extends Component {
   }
 
   render() {
-    return (<Heading
+    return (<Header
       authenticatedUser={this.props.authenticatedUser}
       onUserMenuToggle={this.handleUserMenuToggle}
       displayUserMenu={this.state.displayUserMenu}
       />);
   }
 }
-HeadingContainer.propTypes = {
+HeaderContainer.propTypes = {
   authenticatedUser: React.PropTypes.object
 };

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "material-ui": "^0.16.0",
+    "material-ui": "^0.16.4",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-foundation": "^0.7.0",

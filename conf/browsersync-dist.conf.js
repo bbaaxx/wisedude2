@@ -8,8 +8,8 @@ module.exports = function () {
       ]
     },
     https: {
-      key: conf.paths.conf + '/server.key',
-      cert: conf.paths.conf + '/server.crt',
+      key: conf.paths.conf + '/ssl-cert/server.key',
+      cert: conf.paths.conf + '/ssl-cert/server.crt',
     },
     open: false
   };

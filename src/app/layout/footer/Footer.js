@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class Footing extends Component {
+export class Footer extends Component {
   render() {
     return (
       <footer>
@@ -9,6 +9,6 @@ export class Footing extends Component {
     );
   }
 }
-Footing.propTypes = {
+Footer.propTypes = {
   authenticatedUser: React.PropTypes.object
 };

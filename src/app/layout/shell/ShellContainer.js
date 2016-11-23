@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import * as firebase from 'firebase';
-import {getRoutes} from '../../config/routes';
 
 import {Shell} from './Shell';
-import {HeadingContainer} from '../heading/HeadingContainer';
-import {FootingContainer} from '../footing/FootingContainer';
+import {HeaderContainer} from '../header/HeaderContainer';
+import {FooterContainer} from '../footer/FooterContainer';
 
 export class ShellContainer extends Component {
 
@@ -12,13 +11,15 @@ export class ShellContainer extends Component {
     super(props);
     this.state = {
       authenticatedUser: null,
-      rememberMe: false
+      rememberMe: false,
+      renderHeader: true,
+      renderFooter: false
     };
+
     this.handleAuthChange = this.handleAuthChange.bind(this);
   }
 
   componentDidMount() {
-    this.setState({appRoutes: getRoutes(this.handleAuthChange)});
     firebase.auth().onAuthStateChanged(this.handleAuthChange);
   }
 
@@ -30,21 +31,27 @@ export class ShellContainer extends Component {
   }
 
   render() {
-    const headingComponent = (
-      <HeadingContainer
+    const headerComponent = (
+      <HeaderContainer
         authenticatedUser={this.state.authenticatedUser}
         />
     );
-    const footingComponent = (
-      <FootingContainer/>
+    const footerComponent = (
+      <FooterContainer/>
     );
+
     return (
       <Shell
-        headingComponent={headingComponent}
-        routes={this.state.appRoutes}
-        routerComponent={this.state.appRoutes}
-        footingComponent={footingComponent}
+        routerComponent={this.props.children}
+        renderHeader={this.state.renderHeader}
+        headerComponent={headerComponent}
+        renderFooter={this.state.renderFooter}
+        footerComponent={footerComponent}
         />
     );
   }
 }
+
+ShellContainer.propTypes = {
+  children: React.PropTypes.element
+};

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Button, Icon, Label} from 'semantic-ui-react';
+import {Icon, Label} from 'semantic-ui-react';
 import {UserQuickMenu} from '../../user/UserQuickMenu';
+import {MainMenu} from '../../navigation/MainMenu';
 
-export class Heading extends Component {
+export class Header extends Component {
   render() {
     let greeting;
     if (this.props.authenticatedUser) {
@@ -23,15 +24,15 @@ export class Heading extends Component {
     }
 
     return (
-      <heading id="main-heading">
-        <Button circular icon="settings"/>
+      <header id="main-heading">
+        <MainMenu/>
         {greeting}
         {this.props.displayUserMenu && <UserQuickMenu/>}
-      </heading>
+      </header>
     );
   }
 }
-Heading.propTypes = {
+Header.propTypes = {
   authenticatedUser: React.PropTypes.object,
   onUserMenuToggle: React.PropTypes.func,
   displayUserMenu: React.PropTypes.bool

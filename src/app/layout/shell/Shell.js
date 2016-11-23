@@ -4,15 +4,21 @@ export class Shell extends Component {
   render() {
     return (
       <div className="outer-shell">
-        <div className="heading-shell">
-          {this.props.headingComponent}
-        </div>
+        {this.props.renderHeader && (
+          <div className="header-shell">
+            {this.props.headerComponent}
+          </div>
+        )}
+
         <div className="routing-shell">
           {this.props.routerComponent}
         </div>
-        <div className="footing-shell">
-          {this.props.footingComponent}
-        </div>
+
+        {this.props.renderFooter && (
+          <div className="footer-shell">
+            {this.props.footerComponent}
+          </div>
+        )}
       </div>
     );
   }
@@ -20,6 +26,8 @@ export class Shell extends Component {
 
 Shell.propTypes = {
   routerComponent: React.PropTypes.element,
-  headingComponent: React.PropTypes.element,
-  footingComponent: React.PropTypes.element
+  headerComponent: React.PropTypes.element,
+  footerComponent: React.PropTypes.element,
+  renderHeader: React.PropTypes.bool,
+  renderFooter: React.PropTypes.bool
 };
