@@ -13,7 +13,7 @@ export class ShellContainer extends Component {
       authenticatedUser: null,
       rememberMe: false,
       renderHeader: true,
-      renderFooter: false
+      renderFooter: true
     };
 
     this.handleAuthChange = this.handleAuthChange.bind(this);

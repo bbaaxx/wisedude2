@@ -3,7 +3,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import {getRouter} from './app/config/router';
 
-import '../semantic/dist/semantic.css';
+// import '../node_modules/semantic-ui-css/semantic.css';
 import './index.scss';
 
 // Needed for onTouchTap
@@ -14,7 +14,7 @@ const router = getRouter();
 
 ReactDOM.render(
   router,
-  document.getElementById('shell'),
+  document.getElementById('root'),
   () => {
     console.log('This callback occurs after ReactDOM.render does its thing');
   }

@@ -7,9 +7,9 @@ export function requireAuth(nextState, replace, callback) {
   firebase
     .auth()
     .onAuthStateChanged(currentUser => {
-      console.log('this is happening');
+      console.log('firebase auth state changed (authenticated.js)');
       if (currentUser === null) {
-        console.log('No user');
+        console.log('No user (authenticated.js)');
         replace({
           pathname: '/login',
           state: {nextPathname: nextState.location.pathname}

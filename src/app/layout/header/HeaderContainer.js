@@ -5,22 +5,22 @@ export class HeaderContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayUserMenu: false
+      displayNavbar: false
     };
-    this.handleUserMenuToggle = this.handleUserMenuToggle.bind(this);
+    this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
   }
 
-  handleUserMenuToggle() {
+  handleNavbarToggle() {
     this.setState(prevState => ({
-      displayUserMenu: !prevState.displayUserMenu
+      displayNavbar: !prevState.displayNavbar
     }));
   }
 
   render() {
     return (<Header
       authenticatedUser={this.props.authenticatedUser}
-      onUserMenuToggle={this.handleUserMenuToggle}
-      displayUserMenu={this.state.displayUserMenu}
+      onNavbarToggle={this.handleNavbarToggle}
+      showNavbar={this.state.displayNavbar}
       />);
   }
 }

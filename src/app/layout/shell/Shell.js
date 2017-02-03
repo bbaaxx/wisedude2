@@ -1,24 +1,19 @@
 import React, {Component} from 'react';
+import {Container, Row, Col} from 'reactstrap';
 
 export class Shell extends Component {
   render() {
     return (
-      <div className="outer-shell">
-        {this.props.renderHeader && (
-          <div className="header-shell">
-            {this.props.headerComponent}
-          </div>
-        )}
-
-        <div className="routing-shell">
-          {this.props.routerComponent}
-        </div>
-
-        {this.props.renderFooter && (
-          <div className="footer-shell">
-            {this.props.footerComponent}
-          </div>
-        )}
+      <div>
+        {this.props.renderHeader && this.props.headerComponent}
+        <Container>
+          <Row>
+            <Col>
+              {this.props.routerComponent}
+            </Col>
+          </Row>
+        </Container>
+        {this.props.renderFooter && this.props.footerComponent}
       </div>
     );
   }
