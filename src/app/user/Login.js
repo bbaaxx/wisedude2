@@ -55,5 +55,7 @@ export class Login extends Component {
 }
 
 Login.propTypes = {
-  onAuthChange: React.PropTypes.func
+  onAuthChange: React.PropTypes.func,
+  router: React.PropTypes.object,
+  location: React.PropTypes.object
 };

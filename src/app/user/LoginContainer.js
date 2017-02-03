@@ -2,23 +2,21 @@ import React, {Component} from 'react';
 import {Login} from './Login';
 
 export class LoginContainer extends Component {
-  // const location = this.context.router.location;
-  // console.log('ThisContextLocation', this.context.router.location);
+  handleAuthChange() {
+    console.log('Auth State Changed!!');
+  }
   render() {
+    // console.log('ThisContextRouter', this.context.router.location);
+    console.log('ThisProps', this.props);
     return (
-      <Login/>
+      <Login onAuthChange={this.handleAuthChange}/>
     );
   }
 }
 
-Login.propTypes = {
-  onAuthChange: React.PropTypes.func,
-  router: React.PropTypes.object,
-  location: React.PropTypes.object
-};
-Login.contextTypes = {
+LoginContainer.contextTypes = {
   router: React.PropTypes.object.isRequired
 };
-Login.childContextTypes = {
+LoginContainer.childContextTypes = {
   location: React.PropTypes.object
 };
