@@ -28,10 +28,10 @@ export function getRouter() {
   ];
 
   return (
-    <Router history={browserHistory} routes={routes} onUpdate={handleRouterUpdates}/>
+    <Router history={browserHistory} routes={routes} onUpdate={handleRouteUpdate}/>
   );
 
-  function handleRouterUpdates() {
-    console.log('Routee state updated');
+  function handleRouteUpdate() {
+    console.log('Route state updated');
   }
 }
