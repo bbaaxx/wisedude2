@@ -11,7 +11,7 @@ export class Header extends Component {
         <NavbarToggler right onClick={this.props.onNavbarToggle}/>
         <NavbarBrand href="/">wisedude 2</NavbarBrand>
         <Collapse isOpen={this.props.showNavbar} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav navbar>
             <NavItem>
               <NavLink href="/">Start over</NavLink>
             </NavItem>

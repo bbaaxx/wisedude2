@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 
-export class Shell extends Component {
+export class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className="layout-container">
         {this.props.renderHeader && this.props.headerComponent}
         <Container>
           <Row>
             <Col>
-              {this.props.routerComponent}
+              {this.props.router}
             </Col>
           </Row>
         </Container>
@@ -19,8 +19,8 @@ export class Shell extends Component {
   }
 }
 
-Shell.propTypes = {
-  routerComponent: React.PropTypes.element,
+Layout.propTypes = {
+  router: React.PropTypes.element,
   headerComponent: React.PropTypes.element,
   footerComponent: React.PropTypes.element,
   renderHeader: React.PropTypes.bool,

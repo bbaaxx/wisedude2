@@ -3,17 +3,17 @@ import {Router, browserHistory} from 'react-router';
 import {requireAuth} from '../utils/authenticated';
 
 // These have to come from somewhere backendie
-import {ShellContainer} from '../layout/shell/ShellContainer';
+import {LayoutContainer} from '../layout/LayoutContainer';
 import {SomeComponentContainer} from '../component-template/SomeComponentContainer';
 import {LoginContainer} from '../user/LoginContainer';
-import {Landing} from '../landing/Landing';
+import {LandingContainer} from '../landing/LandingContainer';
 
 export function getRouter() {
   const routes = [
     {
       path: '/',
-      component: ShellContainer,
-      indexRoute: {component: Landing},
+      component: LayoutContainer,
+      indexRoute: {component: LandingContainer},
       childRoutes: [
         {
           path: 'login',

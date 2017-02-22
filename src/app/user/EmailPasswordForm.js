@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Button, Checkbox, Form, Icon} from 'semantic-ui-react';
 import * as firebase from 'firebase';
 
 export class EmailPasswordForm extends Component {
@@ -37,25 +36,12 @@ export class EmailPasswordForm extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Field>
-          <label>Email</label>
-          <input name="email" placeholder="your@email.please"/>
-        </Form.Field>
-        <Form.Field>
-          <label>Password</label>
-          <input name="password" placeholder="(8 to 12 characters)" type="password"/>
-        </Form.Field>
-        <Form.Field>
-          <Checkbox label="Remember me" name="rememberme"/>
-        </Form.Field>
-        <Button type="submit" primary animated fluid>
-          <Button.Content visible>Sign in</Button.Content>
-          <Button.Content hidden>
-            <Icon name="right arrow"/>
-          </Button.Content>
-        </Button>
-      </Form>
+      <form>
+        <label>Email</label>
+        <input name="email" placeholder="your@email.please"/>
+        <label>Password</label>
+        <input name="password" placeholder="(8 to 12 characters)" type="password"/>
+      </form>
     );
   }
 }

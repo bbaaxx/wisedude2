@@ -3,7 +3,7 @@ import React from 'react';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-// import {getRouter} from './app/config/router';
+import {getRouter} from './app/config/router';
 import {ShellContainer} from './app/shell/ShellContainer';
 // import '../node_modules/semantic-ui-css/semantic.css';
 import './index.scss';
@@ -20,9 +20,8 @@ injectTapEventPlugin();
 //     console.log('This callback occurs after ReactDOM.render does its thing');
 //   }
 // );
-
 ReactDOM.render(
-  <ShellContainer/>,
+  <ShellContainer router={getRouter()}/>,
   document.getElementById('root'),
   () => {
     console.log('This callback occurs after ReactDOM.render does its thing');

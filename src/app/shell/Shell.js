@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 
 export class Shell extends Component {
   render() {
-    return this.props.routerComponent;
+    return (
+      <div className="application-shell">
+        {this.props.router}
+      </div>
+    );
   }
 }
 
 Shell.propTypes = {
-  routerComponent: React.PropTypes.element
+  router: React.PropTypes.element
 };
