@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Button, Icon, Menu} from 'semantic-ui-react';
 
 export class UserQuickMenu extends Component {
   constructor(props) {
@@ -16,20 +15,10 @@ export class UserQuickMenu extends Component {
 
   render() {
     return (
-      <Menu className="user-quick-menu" compact icon="labeled" vertical>
-        <Menu.Item name="signout" onClick={this.handleItemClick}>
-          <Button>
-            <Icon name="sign out"/>
-            Sign out
-          </Button>
-        </Menu.Item>
-        <Menu.Item name="profile" onClick={this.handleItemClick}>
-          <Button>
-            <Icon name="user"/>
-            User profile
-          </Button>
-        </Menu.Item>
-      </Menu>
+      <div>
+        <button name="signout" onClick={this.handleItemClick}>Sign out</button>
+        <button name="profile" onClick={this.handleItemClick}>Profile</button>
+      </div>
     );
   }
 }

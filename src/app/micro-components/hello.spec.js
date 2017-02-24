@@ -1,6 +1,6 @@
 /* eslint-env jasmine */
 import React from 'react';
-import TestUtils from 'react/lib/ReactTestUtils';
+import TestUtils from 'react-dom/lib/ReactTestUtils';
 import {Hello} from './hello';
 
 describe('hello component', () => {
