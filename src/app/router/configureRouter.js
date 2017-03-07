@@ -8,7 +8,9 @@ import {SomeComponentContainer} from '../component-template/SomeComponentContain
 import {LoginContainer} from '../user/LoginContainer';
 import {LandingContainer} from '../landing/LandingContainer';
 
-export function getRouter() {
+import App from '../containers/App';
+
+export default function configureRouter() {
   const routes = [
     {
       path: '/',
@@ -18,6 +20,9 @@ export function getRouter() {
         {
           path: 'login',
           component: LoginContainer
+        }, {
+          path: 'todoapp',
+          component: App
         }, {
           path: 'component-template',
           component: SomeComponentContainer,

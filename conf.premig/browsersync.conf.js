@@ -28,6 +28,10 @@ module.exports = function () {
         webpackHotMiddleware(webpackBundler)
       ]
     },
+    https: {
+      key: conf.paths.conf + '/ssl-cert/server.key',
+      cert: conf.paths.conf + '/ssl-cert/server.crt',
+    },
     open: false
   };
 };

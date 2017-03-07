@@ -19,20 +19,14 @@ exports.paths = {
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e',
-  tasks: 'gulp_tasks'
-};
-
-/**
-* used on gulp dist
-*/
-exports.htmlmin = {
-  ignoreCustomFragments: [/{{.*?}}/]
+  tasks: 'gulp_tasks',
+  conf: 'conf'
 };
 
 exports.path = {};
 for (const pathName in exports.paths) {
-  if (Object.prototype.hasOwnProperty.call(exports.paths, pathName)) {
-    exports.path[pathName] = function () {
+  if (exports.paths.hasOwnProperty(pathName)) {
+    exports.path[pathName] = function pathJoin() {
       const pathValue = exports.paths[pathName];
       const funcArgs = Array.prototype.slice.call(arguments);
       const joinArgs = [pathValue].concat(funcArgs);

@@ -28,10 +28,14 @@ export class ShellContainer extends Component {
   }
 
   render() {
+    const {router, store} = this.props;
+    const {authenticatedUser} = this.state;
+
     return (
       <Shell
-        router={this.props.router}
-        user={this.state.authenticatedUser}
+        router={router}
+        store={store}
+        user={authenticatedUser}
         onAuthStateChanged={this.handleAuthChange}
         />
     );
@@ -39,5 +43,6 @@ export class ShellContainer extends Component {
 }
 
 ShellContainer.propTypes = {
-  router: React.PropTypes.element
+  router: React.PropTypes.element,
+  store: React.PropTypes.object
 };
