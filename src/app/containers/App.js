@@ -8,6 +8,7 @@ import * as TodoActions from '../actions/index';
 class App extends Component {
   render() {
     const {todos, actions} = this.props;
+    console.log(this.props);
     return (
       <div>
         <Header
